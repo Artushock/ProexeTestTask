@@ -1,8 +1,11 @@
 package pl.proexe.junior.view.epg
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import pl.proexe.junior.R
@@ -25,8 +28,35 @@ class EpgActivity : AppCompatActivity(), EpgView {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initActionBar()
 
         presenter.onViewCreated(this)
+    }
+
+    private fun initActionBar() {
+        setSupportActionBar(binding.myAwesomeToolbar)
+        supportActionBar?.let {
+            it.title = getString(R.string.program_tv)
+            it.setDisplayHomeAsUpEnabled(true)
+            val drawable = ContextCompat.getDrawable(this, R.drawable.ic_hamburger_v)
+            it.setHomeAsUpIndicator(drawable)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.optional_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                binding.drawer.openDrawer(GravityCompat.START)
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun showEpgList(programmes: List<TvProgramme>) {
@@ -35,7 +65,8 @@ class EpgActivity : AppCompatActivity(), EpgView {
         val recyclerView = binding.epgRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val itemDecoration = DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL)
+        val itemDecoration =
+            DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL)
         val drawable = ContextCompat.getDrawable(this, R.drawable.epg_item_divider)
         if (drawable != null) {
             itemDecoration.setDrawable(drawable)

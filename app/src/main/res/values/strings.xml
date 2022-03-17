@@ -16,7 +16,25 @@
     <string name="notes">Nagrania</string>
     <string name="desc_tv_online">TV Online</string>
     <string name="desc_account_icon">Account Icon</string>
+
+    <string name="all">Wszystkie</string>
+    <string name="kids">Dzieci</string>
+    <string name="education">Educacia</string>
+    <string name="movies_and_series">Filmy i seriale</string>
+    <string name="info">Informacja</string>
+    <string name="music">Muzyka</string>
+    <string name="general">Ogólne</string>
+    <string name="sport">Sport</string>
+    <string name="lifestyle">Styl życia</string>
+
     <string name="moje_konto">Moje konto</string>
     <string name="_123456">123456</string>
+
+
+
+
+
+
+
 
 </resources>

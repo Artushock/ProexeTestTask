@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/ic_more_vert_white_24dp"
+        android:title=""
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/all"
+                android:icon="@drawable/ic_all"
+                android:title="@string/all"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/favorite"
+                android:icon="@drawable/ic_fav"
+                android:title="@string/favorite"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/kids"
+                android:icon="@drawable/ic_kids"
+                android:title="@string/kids"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/education"
+                android:icon="@drawable/ic_edu"
+                android:title="@string/education"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/movies_and_series"
+                android:icon="@drawable/ic_movie"
+                android:title="@string/movies_and_series"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/info"
+                android:icon="@drawable/ic_info"
+                android:title="@string/info" />
+
+            <item
+                android:id="@+id/music"
+                android:icon="@drawable/ic_music"
+                android:title="@string/music"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/general"
+                android:icon="@drawable/ic_general"
+                android:title="@string/general"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/sport"
+                android:icon="@drawable/ic_sport"
+                android:title="@string/sport"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/lifestyle"
+                android:icon="@drawable/ic_styl"
+                android:title="@string/lifestyle"
+                app:showAsAction="ifRoom" />
+        </menu>
+
+    </item>
+
+
+</menu>
