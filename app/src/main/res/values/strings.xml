@@ -6,4 +6,6 @@
     <string name="today">Dzisiaj</string>
     <string name="tomorrow">Jutro</string>
     <string name="day_after_tomorrow">Pojutrze</string>
+    <string name="desc_logo">Logo</string>
+    <string name="desc_item_menu">Item menu</string>
 </resources>
