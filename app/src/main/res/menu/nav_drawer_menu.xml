@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/nav_drawer_main_screen" />
+
+    <item
+        android:id="@+id/program_tv"
+        android:title="@string/program_tv" />
+
+    <item
+        android:id="@+id/channels"
+        android:title="@string/channels" />
+
+    <item
+        android:id="@+id/favorite"
+        android:title="@string/favorite" />
+
+    <item
+        android:id="@+id/notes"
+        android:title="@string/notes" />
+</menu>

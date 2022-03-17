@@ -8,4 +8,15 @@
     <string name="day_after_tomorrow">Pojutrze</string>
     <string name="desc_logo">Logo</string>
     <string name="desc_item_menu">Item menu</string>
+
+
+    <string name="program_tv">Program TV</string>
+    <string name="channels">Kanały</string>
+    <string name="favorite">Ulubione</string>
+    <string name="notes">Nagrania</string>
+    <string name="desc_tv_online">TV Online</string>
+    <string name="desc_account_icon">Account Icon</string>
+    <string name="moje_konto">Moje konto</string>
+    <string name="_123456">123456</string>
+
 </resources>
