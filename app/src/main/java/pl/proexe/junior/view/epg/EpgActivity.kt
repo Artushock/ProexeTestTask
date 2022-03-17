@@ -1,8 +1,13 @@
 package pl.proexe.junior.view.epg
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -79,7 +84,15 @@ class EpgActivity : AppCompatActivity(), EpgView {
     }
 
     override fun showDaysList(days: List<DayTile>) {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val linearLayout = binding.daysListLinearLayout
+
+        for (d in days) {
+            val tv = TextView(this)
+            tv.setTextColor(ContextCompat.getColor(this, R.color.colorRecyclerViewTimeItemNotSelected))
+            tv.setPadding(60, 0, 60, 0)
+            tv.text = getString(d.dayLabel)
+            linearLayout.addView(tv)
+        }
     }
 
     override fun showCategories(categories: List<TvProgrammeCategory>) {

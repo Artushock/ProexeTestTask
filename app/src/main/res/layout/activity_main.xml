@@ -21,12 +21,27 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/my_awesome_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:background="?attr/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
                 app:titleTextColor="@color/colorText" />
 
         </com.google.android.material.appbar.AppBarLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRecyclerViewTimeBackground"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/days_list_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/epg_recycler_view"
